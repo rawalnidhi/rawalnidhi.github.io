@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the page title -->
+	<title>KCCI</title>
+	<!-- add icon link -->
+	<link rel="icon" href="static/images/icons/fncci_logo.png" type="image/x-icon"
+/>
+	<!-- inlcude google nunito sans font cdn link -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+	<!-- inlcude google cabin font cdn link -->
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<!-- include the site bootstrap stylesheet -->
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="static/css/style.css">
+	<!-- include theme color setting stylesheet -->
+	<link rel="stylesheet" href="static/css/colors.css">
+	<!-- include the site responsive stylesheet -->
+	<link rel="stylesheet" href="static/css/responsive.css">
+</head>
+<body>
+	<!-- pageWrapper -->
+	<div id="pageWrapper">
+		<!-- phStickyWrap -->
+		<div class="phStickyWrap">
+			<!-- pageHeader -->
+			<header id="pageHeader" class="bg-white">
+				<div class="hdTopBar py-2 py-xl-3 bg-dark d-none d-md-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-8">
+								<ul class="list-unstyled hdScheduleList mb-0 d-flex flex-wrap align-items-center">
+									<li>
+										<a href="tel:18001234567">
+											<img src="static/images/icons/phone_call.png" style="width: 20px; height: 20px" alt="">
+											 Call on: 083-525746
+										</a>
+									</li>
+									<li>
+										<time datetime="2011-01-12">
+											<img src="static/images/icons/wall_clock.png" style="width: 20px; height: 20px" alt="">
+											 Open Hours: Mon - Fri 8.00 am - 6.00 pm
+										</time>
+									</li>
+								</ul>
+							</div>
+							<div class="col-4">
+								<!-- <ul class="list-unstyled hdAlterLinksList d-flex justify-content-end flex-wrap mb-0">
+									<li>
+										<a href="javascript:void(0);">Council</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">Vacancies</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">Complaints</a>
+									</li>
+								</ul> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hdFixerWrap py-2 py-md-3 py-xl-5 sSticky bg-white">
+					<div class="container" >
+						<nav class="navbar navbar-expand-md navbar-light p-0">
+
+							<div class="logo flex-shrink-0 mr-3 mr-xl-8 mr-xlwd-16">
+								<!-- Hamburger -->
+								<style>
+									.overlay{
+										position: fixed;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										opacity: 0;
+										visibility: hidden;
+										transition: opacity .35s, visibility .35s, height .35s;
+										overflow: hidden;
+										background: black;
+										z-index: -1;
+										
+									  }
+									  
+									  #main-menu {
+									  display: block;
+									  height: 100px;
+									  width: 100%;
+									  background: #020125;
+									  margin: 0px;  
+									  z-index: 9;
+									  }
+									  
+									  #main-menu ul {
+									  max-width: 800px;
+									  width: 100%;
+									  height: 100%;
+									  margin: 0px auto;
+									  padding: 0px;
+									  display: flex;
+									  justify-content: space-evenly;
+									  align-items: center;
+									  z-index: 9;
+									  }
+									  
+									  #main-menu li {
+									  list-style-type: none;
+									  font-size: 2rem;
+									  }
+									  
+									  #main-menu a {
+									  color: #B9FAF8;
+									  font-size: 1.5rem;
+									  text-decoration: none;
+									  }
+									  
+									  #main-menu a:hover {
+									  text-decoration: underline;
+									  }
+									  
+									  #hamburger-input{
+									  display: none;
+									  }
+									  
+									  #hamburger-menu {
+										position: fixed;
+										top: 20px;
+										left: 20px;
+										width: 20px;
+										height: 20px;
+										display: none;
+										border: none;
+										padding: 0px;
+										margin: 0px;
+										font-family: 'Cabin', Sans-serif;
+										background: linear-gradient(
+										  to bottom, 
+										  #0e0c57, #0e0c57 20%, 
+										  white 20%, white 40%, 
+										  #0e0c57 40%, #0e0c57 60%, 
+										  white 60%, white 80%, 
+										  #0e0c57 80%, #0e0c57 100%
+										);
+									  }
+									  
+									  #hamburger-menu #sidebar-menu {
+										visibility: hidden;
+										position: fixed;
+										top: 0;
+										left: -250px;
+										width: 200px;
+										height: 100%;
+										background-color: #0e0c57;
+										transition: 0.3s;
+										padding: 0px 20px;
+										padding-top: 20px;
+										box-sizing: border-box;
+									  }
+									  
+									  #hamburger-menu h3 {
+									  color: #B9FAF8;
+									  font-size: 1.7rem;
+									  }
+									  
+									  #hamburger-menu ul {
+									  padding-left: 0px;
+									  }
+									  
+									  #hamburger-menu li {
+									  list-style-type: none;
+									  line-height: 3rem;
+									  }
+									  
+									  #hamburger-menu a {
+									  color: #B9FAF8;
+									  font-size: 1.3rem;
+									  text-decoration: none;
+									  }
+									  
+									  #hamburger-menu a:hover {
+									  text-decoration: underline;
+									  }
+									  
+									  #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+										visibility: visible;
+										left: 0;
+									  }
+									  #hamburger-input:checked ~ .overlay{
+									   visibility: visible;
+									  opacity: 0.4;
+									  }
+									  
+									  
+									  @media screen and (max-width: 750px) {
+									  #main-menu {
+										display: none;
+									  }
+									  #hamburger-menu {
+										display: inline;
+									  }
+									  }
+								</style>
+								<input type="checkbox" id="hamburger-input" class="burger-shower" />
+								<label id="hamburger-menu" for="hamburger-input">
+								  <nav id="sidebar-menu">
+									<h3>Menu</h3>
+									<ul>
+									  <li><a href="/">Home</a></li>
+									  <li><a href="/">Members</a></li>
+									  <li><a href="/">Event</a></li>
+									  <li><a href="/">Media Room</a></li>
+									  <li><a href="/">About</a></li>
+									  <li><a href="/">Contact</a></li>
+									</ul>
+								  </nav>
+								</label>
+								
+								<div class="overlay"></div>
+							</div>
+							<div class="logo flex-shrink-0 mr-3 mr-xl-8 mr-xlwd-16">
+								<a href="/">
+									<img src="static/images/kailalicci_logo.png" class="img-fluid" style="width: 300px; height: 50px; margin-left: 20px; " alt="KCCI">
+								</a>
+							</div>
+							<div style="padding-top: 15px;" class="hdNavWrap flex-grow-1 d-flex align-items-center justify-content-end justify-content-lg-start">
+								<div class="collapse navbar-collapse pageMainNavCollapse mt-2 mt-md-0" id="pageMainNavCollapse">
+									<ul class="navbar-nav mainNavigation">
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle " href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+									
+										</li>
+										
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle dropIcn" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Members</a>
+											<div class="dropdown-menu hdMainDropdown desktopDropOnHover">
+												<ul class="list-unstyled mb-0 hdDropdownList">
+													<li><a class="dropdown-item"  href="/" >Members Database</a></li>
+													<li><a class="dropdown-item"  href="/" >How to become members ?</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle dropIcn"  href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+											<div class="dropdown-menu hdMainDropdown desktopDropOnHover">
+												<ul class="list-unstyled mb-0 hdDropdownList">
+													<li><a class="dropdown-item"  href="/" >Events List</a></li>
+													<li><a class="dropdown-item"  href="/" >Events </a></li>
+													<li><a class="dropdown-item" href="/" >Events Detail</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle dropIcn" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Room</a>
+											<div class="dropdown-menu hdMainDropdown desktopDropOnHover">
+												<ul class="list-unstyled mb-0 hdDropdownList">
+													<li><a class="dropdown-item"  href="/" >Notice and Announcements</a></li>
+													<li><a class="dropdown-item"  href="/">Press Release</a></li>
+													<li><a class="dropdown-item"  href="/" >Gallery</a></li>
+												</ul>
+											</div>
+										</li>
+										
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle dropIcn" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>
+											<div class="dropdown-menu hdMainDropdown desktopDropOnHover">
+												<ul class="list-unstyled mb-0 hdDropdownList">
+													<li><a class="dropdown-item" href="/">Useful Links</a></li>
+													<li><a class="dropdown-item" href="/">Feedback</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle " href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+										
+										</li>
+										<li class="nav-item dropdown ddohOpener">
+											<a class="nav-link dropdown-toggle " href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+										
+										</li>
+									</ul>
+								</div>
+								<form action="#" class="hdSearchForm ml-3 ml-xl-6">
+									<a class="hdSearchOpener" data-toggle="collapse" href="#hdSearchCollapse" role="button" aria-expanded="false" aria-controls="hdSearchCollapse">
+										<i class="fa fa-search" style="padding-top: 10px;"><span class="sr-only">search</span></i>
+										<i ><span class="sr-only">search</span></i>
+									</a>
+									<div class="collapse hdSearchCollapse d-block position-fixed" id="hdSearchCollapse">
+										<div class="d-flex w-100 h-100 align-items-center jusity-content-center">
+											<div class="container d-block text-center text-light">
+												<div class="row">
+													<div class="col-12 col-md-8 offset-md-2">
+														<div class="input-group mb-3">
+															<input type="search" class="form-control text-left" placeholder="Search&hellip;">
+															<div class="input-group-append">
+																<button class="btn btn-secondary" type="button">Search</button>
+															</div>
+														</div>
+														<p class="mb-0">Popular searches: <br class="d-md-none"><a href="javascript:void(0);">Modern PSD</a>, <a href="javascript:void(0);">Portfolio design</a></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<a class="position-absolute rounded-circle bg-danger text-white btnClose d-flex align-items-center justify-content-center" data-toggle="collapse" href="#hdSearchCollapse" role="button" aria-expanded="true" aria-controls="hdSearchCollapse">
+											<i class="fas fa-times"><span class="sr-only">search</span></i>
+										</a>
+									</div>
+								</form>
+							
+							</div>
+							<div class="hdRighterWrap d-flex align-items-center justify-content-end">
+								<div class="dropdown hdLangDropdown ddohOpener d-none d-lg-block">
+									<a class="d-inline-block align-top dropdown-toggle dropIcn" href="javascript:void(0);" role="button" id="hdLanguagedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eng</a>
+									<div class="dropdown-menu dropdown-menu-right rounded-lg overflow-hidden desktopDropOnHover p-0" aria-labelledby="hdLanguagedropdown">
+										<a class="dropdown-item text-center active" href="javascript:void(0);">Eng</a>
+										<a class="dropdown-item text-center" href="javascript:void(0);">Nep</a>
+									</div>
+								</div>
+								<!-- <a href="contact-1.html" class="btn btn-outline-secondary bdrWidthAlter ml-3 ml-xl-6 btnHd d-none d-lg-block text-capitalize position-relative border-0 p-0" data-hover="Report an Issues">
+									<span class="d-block btnText">Report an Issues</span>
+								</a> -->
+								<!-- <button class="navbar-toggler pgNavOpener ml-2 bdrWidthAlter position-relative" type="button" data-toggle="collapse" data-target="#pageMainNavCollapse" aria-controls="pageMainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon"></span>
+								</button> -->
+							</div>
+							
+						</nav>
+					</div>
+				</div>
+			</header>
+		</div>
+		<main style="margin-top: 16px;">
+			
+			<div class="introBlock ibSlider">
+				<div>
+					<article class="d-flex w-100 position-relative ibColumn text-white overflow-hidden">
+						<div class="alignHolder d-flex align-items-center w-100">
+							<div class="align w-100 pt-20 pb-20 pt-md-40 pb-md-30 px-md-17">
+								<div class="container position-relative">
+									<div class="row">
+										<div class="col-12 col-md-9 col-xl-7 fzMedium">
+											<h1 class="text-white mb-4 h1Large">Welcome to the Kailali Chamber of Commerce and Industry Portal</h1>
+											<p>The Most Exciting guide to living, working, visiting and investing business.</p>
+											<a href="/" class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6" data-hover="Discover More">
+												<span class="d-block btnText">Discover More</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="ibBgImage bgCover position-absolute" style="background-image: url(static/images/icons/Kailali.jpg);"></span>
+					</article>
+				</div>
+				<div>
+					<article class="d-flex w-100 position-relative ibColumn text-white overflow-hidden">
+						<div class="alignHolder d-flex align-items-center w-100">
+							<div class="align w-100 pt-20 pb-20 pt-md-40 pb-md-30 px-md-17">
+								<div class="container position-relative">
+									<div class="row">
+										<div class="col-12 col-md-9 col-xl-7 fzMedium">
+											<h1 class="text-white mb-4 h1Large">Welcome to the Kailali Chamber of Commerce and Industry Portal</h1>
+											<p>The Most Exciting guide to living, working, visiting and investing business.</p>
+											<a href="eventsList.html" class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6" data-hover="Discover More">
+												<span class="d-block btnText">Discover More</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="ibBgImage bgCover position-absolute" style="background-image: url(static/images/icons/bg_2.jpg);"></span>
+					</article>
+				</div>
+				<div>
+					<article class="d-flex w-100 position-relative ibColumn text-white overflow-hidden">
+						<div class="alignHolder d-flex align-items-center w-100">
+							<div class="align w-100 pt-20 pb-20 pt-md-40 pb-md-30 px-md-17">
+								<div class="container position-relative">
+									<div class="row">
+										<div class="col-12 col-md-9 col-xl-7 fzMedium">
+											<h1 class="text-white mb-4 h1Large">Welcome to the Kailali Chamber of Commerce and Industry Portal</h1>
+											<p>The Most Exciting guide to living, working, visiting and investing business.</p>
+											<!-- <a href="eventsList.html" class="btn btnTheme font-weight-bold btnMinSm text-capitalize position-relative border-0 p-0 mt-6" data-hover="Discover More">
+												<span class="d-block btnText">Discover More</span>
+											</a> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="ibBgImage bgCover position-absolute" style="background-image: url(static/images/icons/bg_3.png);"></span>
+					</article>
+				</div>
+			</div>
+			<aside class="featuresAsideBlock position-relative text-white">
+				<div class="container">
+					<div class="flatpWrap position-relative mt-n8 mt-md-n18">
+						<ul class="list-unstyled fabFeaturesList mb-0 d-flex overflow-hidden flex-wrap">
+							<li>
+								<a class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10">
+									<span class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle">
+										<img src="static/images/icons/business-process.gif" alt=""><span class="sr-only">icon</span>
+									</span>
+									<h2 class="mb-0">Your <br>Organization</h2>
+								</a>
+							</li>
+							
+							<li>
+								<a class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10">
+									<span class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle">
+										<img src="static/images/icons/business.gif" alt=""><span class="sr-only">icon</span>
+									</span>
+									<h2 class="mb-0">Business and <br>Industry</h2>
+								</a>
+							</li>
+							
+							<li>
+								<a href="/" class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10">
+									<span class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle">
+										<img src="static/images/icons/culture.gif" alt=""><span class="sr-only">icon</span>									</span>
+									<h2 class="mb-0">Culture and <br>Recreation</h2>
+								</a>
+							</li>
+							<li>
+								<a class="fflColumn d-block w-100 text-center px-2 pt-4 pb-10">
+									<span class="icnWrap d-flex align-items-center justify-content-center mx-auto mb-4 rounded-circle">
+										<img src="static/images/icons/agreement.gif" alt=""><span class="sr-only">icon</span>									</span>
+									<h2 class="mb-0">Maintains relations with <br> business associations</h2>
+								</a>
+							</li>
+
+							
+						</ul>
+					</div>
+				</div>
+				<div class="fabBtNoteTextWrap text-center fontAlter fzMedium pt-6 pt-md-10 pb-6 pb-md-10 pb-lg-14">
+					<div class="container">
+						<div class="d-lg-flex justify-content-center align-items-center">
+							<p class="mb-lg-0">The official guide to living, working, visiting and investing in the Business</p>
+							<a href="/" class="btn btn-dark btnSwitchDark fwMedium position-relative border-0 p-0 btnCustomSmall mt-md-1 mt-lg-0 ml-lg-4" data-hover="Let’s explore more"><span class="d-block btnText fwMedium">Let’s explore more</span></a>
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<!-- section for press release -->
+			<section class="exploreServicesBlock position-relative pt-7 pt-md-12 pt-lg-16 pt-xl-20 pb-0 pb-md-4 pb-lg-8 pb-xl-12">
+				<div class="container">
+					<header class="headingHead mb-7 md-md-9 mb-lg-13">
+						<div class="row align-items-end">
+							<div class="col-12 col-sm-7 col-xl-5">
+								<h2 class="mb-0">Let’s explore local services, programs &amp; initiatives.</h2>
+							</div>
+							<div class="col-12 col-sm-5 col-xl-7 d-sm-flex justify-content-sm-end">
+								<a href="/" class="btn btn-dark text-capitalize position-relative border-0 p-0 mt-4 mt-sm-0 mb-sm-1 minWidthMedium" data-hover="Explore Press Release">
+									<span class="d-block btnText">Explore Press Release</span>
+								</a>
+							</div>
+						</div>
+					</header>
+					<div class="row justify-content-center" >
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="esColumn position-relative text-center mb-13">
+								<span class="imgHolder d-block w-100 bgCover" style="background-image: url(static/images/img04.jpg);"></span>
+								<div class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5">
+									<i class="fa-regular fa-calendar-days" style="text-align: left;"></i><a style="padding-left: 20px; font-size: 16px;">31/05/2024 </a>
+									<h3 class="fwMedium mb-0" style="padding-top: 20px; font-size: 20px;font-weight: bold">राम नवमीको दिन महासंघ सचिवालय बन्द रहने सूचना</h3>
+									<a href="/" class="btnLink fontAlter">Learn More <i class="fas fa-chevron-right blIcn"><span class="sr-only">icon</span></i></a>
+								</div>
+							</article>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="esColumn position-relative text-center mb-13">
+								<span class="imgHolder d-block w-100 bgCover" style="background-image: url(static/images/icons/bg_2.jpg);"></span>
+								<div class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5">
+									<i class="fa-regular fa-calendar-days" style="text-align: left;"></i><a style="padding-left: 20px; font-size: 16px;">31/05/2024 </a>
+									<h3 class="fwMedium mb-0" style="padding-top: 20px; font-size: 20px;font-weight: bold">राम नवमीको दिन महासंघ सचिवालय बन्द रहने सूचना</h3>
+									<a href="/" class="btnLink fontAlter">Learn More <i class="fas fa-chevron-right blIcn"><span class="sr-only">icon</span></i></a>
+								</div>
+							</article>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="esColumn position-relative text-center mb-13">
+								<span class="imgHolder d-block w-100 bgCover" style="background-image: url(static/images/icons/bg_3.png);"></span>
+								<div class="escCaption bg-white shadow position-absolute pt-4 px-2 pb-5">
+									<i class="fa-regular fa-calendar-days" style="text-align: left;"></i><a style="padding-left: 20px; font-size: 16px;">31/05/2024 </a>
+									<h3 class="fwMedium mb-0" style="padding-top: 20px; font-size: 20px;font-weight: bold">राम नवमीको दिन महासंघ सचिवालय बन्द रहने सूचना</h3>
+									<a href="/" class="btnLink fontAlter">Learn More <i class="fas fa-chevron-right blIcn"><span class="sr-only">icon</span></i></a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- section for events -->
+			<section class="upcomeventsBlock position-relative pt-7 pt-md-12 pt-lg-16 pt-xl-20 pb-0 pb-md-4 pb-lg-8 pb-xl-12">
+				<div class="container">
+					<header class="headingHead mb-7 md-md-9 mb-lg-13">
+						<div class="row align-items-end">
+							<div class="col-12 col-sm-7 col-xl-5">
+								<h2 class="mb-0">Events</h2>
+							</div>
+							<div class="col-12 col-sm-5 col-xl-7 d-sm-flex justify-content-sm-end">
+								<a href="/" class="btn-link fontAlter">See All Events <i class="fas fa-chevron-right blIcn"><span class="sr-only">icon</span></i></a>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="ueEveColumn position-relative shadow bg-white mb-6">
+								<div class="imgHolder position-relative">
+									<time class="ueTimeTag position-absolute text-center d-flex bg-white fontAlter fwSemiBold text-lDark text-uppercase" datetime="2011-01-12">
+										<span class="d-block text-white textDay flex-shrink-0 font-weight-bold">01</span>
+										<span class="d-block py-2 px-3">OCT 2022</span>
+									</time>
+								</div>
+								<div class="ueDescriptionWrap pt-5 pb-8 px-5">
+									<h3 class="h3Small fwMedium mb-3"  style="margin-top: 40px;" 	>
+										<a href="/">Orientation and Capacity Building Training</a>
+									</h3>
+								
+									<a href="/" class="btn btnCustomLightOutline bdrWidthAlter btn-sm text-capitalize position-relative border-0 p-0 mt-3 align-top" data-hover="More Details">
+										<span class="d-block btnText">More Details</span>
+									</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="ueEveColumn position-relative shadow bg-white mb-6">
+								<div class="imgHolder position-relative">
+									<time class="ueTimeTag position-absolute text-center d-flex bg-white fontAlter fwSemiBold text-lDark text-uppercase" datetime="2011-01-12">
+										<span class="d-block text-white textDay flex-shrink-0 font-weight-bold">01</span>
+										<span class="d-block py-2 px-3">OCT 2022</span>
+									</time>
+								</div>
+								<div class="ueDescriptionWrap pt-5 pb-8 px-5">
+									<h3 class="h3Small fwMedium mb-3"  style="margin-top: 40px;" 	>
+										<a href="/">Orientation and Capacity Building Training</a>
+									</h3>
+								
+									<a href="/" class="btn btnCustomLightOutline bdrWidthAlter btn-sm text-capitalize position-relative border-0 p-0 mt-3 align-top" data-hover="More Details">
+										<span class="d-block btnText">More Details</span>
+									</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="ueEveColumn position-relative shadow bg-white mb-6">
+								<div class="imgHolder position-relative">
+									<time class="ueTimeTag position-absolute text-center d-flex bg-white fontAlter fwSemiBold text-lDark text-uppercase" datetime="2011-01-12">
+										<span class="d-block text-white textDay flex-shrink-0 font-weight-bold">01</span>
+										<span class="d-block py-2 px-3">OCT 2022</span>
+									</time>
+								</div>
+								<div class="ueDescriptionWrap pt-5 pb-8 px-5">
+									<h3 class="h3Small fwMedium mb-3"  style="margin-top: 40px;" 	>
+										<a href="/">Orientation and Capacity Building Training</a>
+									</h3>
+								
+									<a href="/" class="btn btnCustomLightOutline bdrWidthAlter btn-sm text-capitalize position-relative border-0 p-0 mt-3 align-top" data-hover="More Details">
+										<span class="d-block btnText">More Details</span>
+									</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+			<!-- section for Notice and Announcements -->
+			<section class="newsPulicationsBlock position-relative bg-light overflow-hidden pt-7 pb-4 pt-md-10 pb-md-4 pt-lg-16 pb-lg-10 pt-xl-22 pb-xl-16">
+				<div class="container position-relative npbHolder">
+					<div class="row">
+						<div class="col-12 col-lg-3">
+							<header class="headingHead pt-2 mb-7 mb-lg-0">
+								<h2 class="fwSemiBold mb-2">Notice and Announcements</h2>
+								<p>The notice about recent activities for needed peoples.</p>
+								<a href="/" class="btn btn-outline-secondary bdrWidthAlter text-capitalize position-relative border-0 p-0 mt-5 btnXsMinWidth" data-hover="More " >
+									<span class="d-block btnText">More</span>
+								</a>
+							</header>
+						</div>
+						<div class="col-12 col-lg-9">
+							<div class="row">
+								<div class="col-12 col-md-6 col-xl-4">
+									<article class="npbColumn shadow bg-white mb-6">
+										<div class="imgHolder position-relative">
+											<a href="/">
+												<img src="static/images/icons/fncci_logo.png" class="img-fluid w-100 d-block" alt="image description">
+											</a>
+											<time datetime="2011-01-12" class="npbTimeTag font-weight-bold fontAlter position-absolute text-white px-2 py-1">15 Oct 2020</time>
+										</div>
+										<div class="npbDescriptionWrap px-5 pt-8 pb-5">
+											
+											<h3 class="fwSemiBold mb-6">
+												<a href="/">List of City Weekend Celebrations</a>
+											</h3>
+											<a href="/" class="btnCr d-inline-block align-top fontAlter">Continue Reading <i class="	fas fa-arrow-right bcIcn ml-2 align-middle"><span class="sr-only">icon</span></i></a>
+										</div>
+									</article>
+								</div>
+								<div class="col-12 col-md-6 col-xl-4">
+									<article class="npbColumn shadow bg-white mb-6">
+										<div class="imgHolder position-relative">
+											<a href="/">
+												<img src="static/images/icons/fncci_logo.png" class="img-fluid w-100 d-block" alt="image description">
+											</a>
+											<time datetime="2011-01-12" class="npbTimeTag font-weight-bold fontAlter position-absolute text-white px-2 py-1">12 Oct 2020</time>
+										</div>
+										<div class="npbDescriptionWrap px-5 pt-8 pb-5">
+										
+											<h3 class="fwSemiBold mb-6">
+												<a href="/">New Australian Economic Culture</a>
+											</h3>
+											<a href="/" class="btnCr d-inline-block align-top fontAlter">Continue Reading <i class="	fas fa-arrow-right bcIcn ml-2 align-middle"><span class="sr-only">icon</span></i></a>
+										</div>
+									</article>
+								</div>
+								<div class="col-12 col-md-6 col-xl-4">
+									<article class="npbColumn shadow bg-white mb-6">
+										<div class="imgHolder position-relative">
+											<a href="/">
+												<img src="static/images/icons/fncci_logo.png" class="img-fluid w-100 d-block" alt="image description">
+											</a>
+											<time datetime="2011-01-12" class="npbTimeTag font-weight-bold fontAlter position-absolute text-white px-2 py-1">08 Oct 2020</time>
+										</div>
+										<div class="npbDescriptionWrap px-5 pt-8 pb-5">
+										
+											<h3 class="fwSemiBold mb-6">
+												<a href="/">Smart City Design Plan 2025</a>
+											</h3>
+											<a href="/" class="btnCr d-inline-block align-top fontAlter">Continue Reading <i class="	fas fa-arrow-right bcIcn ml-2 align-middle"><span class="sr-only">icon</span></i></a>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<span class="npbBgPattern w-100 h-100 bgCover position-absolute inaccessible" style="background-image: url(static/images/bgPattern2.jpg);"></span>
+			</section>
+			
+			
+		</main>
+		<!-- ftAreaWrap -->
+		<div class="ftAreaWrap position-relative bg-gDark fontAlter">
+			<aside class="ftConnectAside pt-4 pb-3 pt-md-7 pb-md-7 text-center text-md-left">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-12 col-lg-7">
+							<nav class="ftcaNav mb-4 mb-lg-0">
+								<ul class="list-unstyled d-flex flex-wrap mb-0 justify-content-center justify-content-lg-start">
+									<li>
+										<a href="/">About Us</a>
+									</li>
+									
+									<li>
+										<a href="/">Events</a>
+									</li>
+									<li>
+										<a href="/">News</a>
+									</li>
+									<li>
+										<a href="/">Contact</a>
+									</li>
+									
+								</ul>
+							</nav>
+						</div>
+						<div class="col-12 col-lg-5">
+							<div class="ctConnectWrap d-sm-flex justify-content-sm-center justify-content-lg-end align-items-sm-center">
+								<strong class="title flex-shrink-0 mb-1 font-weight-normal mr-sm-3 d-block">Connect With Us</strong>
+								<ul class="list-unstyled socialNetworks ftSocialNetworks d-flex flex-wrap justify-content-center justify-content-sm-end mb-0">
+									<li>
+										<a href="https://www.facebook.com/fncci" target="_blank">
+											<i class="fab fa-facebook-square"><span class="sr-only">facebook</span></i>
+										</a>
+									</li>
+									<li>
+										<a href="/" target="_blank">
+											<i class="fab fa-twitter"><span class="sr-only">twitter</span></i>
+										</a>
+									</li>
+									
+									<li>
+										<a href="https://www.youtube.com/channel/UCTzLycz86ztLl9s9oea-FMA"  target="_blank">
+											<i class="fab fa-youtube"><span class="sr-only">youtube</span></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!-- footerAside -->
+			<aside class=" pt-9 pb-sm-2 pt-xl-14 pb-xl-12">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-2 ">
+							<div class="ftLogo mt-md-1 mb-6">
+								<a href="/">
+									<img src="static/images/icons/fncci_logo.png" class="img-fluid" alt="kcci">
+								</a>
+							</div>
+							
+						</div>
+						<div class="col-12 col-sm-8 ">
+							<h3 class="ftHeading text-white mb-4 font-weight-normal">Federation of Nepalese Chambers of Commerce & Industry - Karnali Province</h3>
+							<address class="mb-0 ftPlace">
+								<p class="mb-2"><strong class="font-weight-normal">नेपाल उद्योग वाणिज्य महासंघ - कर्णाली प्रदेश</strong></p>
+								<ul class="list-unstyled ftpScheduleList mb-0">
+									
+									<li>
+										<i class="fas fa-phone-alt icn mr-1 mr-sm-0"><span class="sr-only">icon</span></i>
+										<strong class="title font-weight-normal text-white">Phone:</strong>
+										<a href="tel:18001234567">083-525746</a>
+									</li>
+									<li>
+										<i class="fas fa-envelope icn mr-1 mr-sm-0"><span class="sr-only">icon</span></i>
+										<strong class="title font-weight-normal text-white">Email:</strong>
+										<a href="mailto:pradeshfncci6@gmail.com">pradeshfncci6@gmail.com</a>
+									</li>
+								</ul>
+							</address>
+						</div>
+						
+					</div>
+				</div>
+			</aside>
+			<!-- pageFooter -->
+			<footer id="pageFooter" class="text-center bg-dark pt-6 pb-3 pt-md-8 pb-md-5">
+				<div class="container">
+					<p><a href="/">KCCI</a> - <a href="/">Copyright</a> &copy; 2024. <br class="d-md-none">All Rights Reserved</p>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<!-- include jQuery library -->
+	<script src="static/js/jquery-3.6.0.min.js"></script>
+	<!-- include custom JavaScript -->
+	<script src="static/js/jqueryCustom.js"></script>
+	<!-- include plugins JavaScript -->
+	<script src="static/js/plugins.js"></script>
+	<!-- include fontAwesome -->
+	<script src="https://kit.fontawesome.com/391f644c42.js"></script>
+</body>
+</html>

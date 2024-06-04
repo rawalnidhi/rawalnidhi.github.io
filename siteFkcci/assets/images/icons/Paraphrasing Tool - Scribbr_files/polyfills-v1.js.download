@@ -1,0 +1,6 @@
+(function(){if(!Array.prototype.flat){Array.prototype.flat=function(depth=1){return this.reduce(function(flat,toFlatten){return flat.concat(Array.isArray(toFlatten)&&depth>1?toFlatten.flat(depth-1):toFlatten);},[]);};}
+if(!Array.prototype.at){Array.prototype.at=function(index){index=index>=0?index:this.length+index;if(index<0||index>=this.length){return undefined;}
+return this[index];};}
+if(!Promise.allSettled){Promise.allSettled=function(promises){return new Promise(function(resolve){if(!Array.isArray(promises)){throw new TypeError('Promises must be an array');}
+var results=[];var completedPromises=0;function checkCompletion(){completedPromises++;if(completedPromises===promises.length){resolve(results);}}
+promises.forEach(function(promise,index){Promise.resolve(promise).then(function(value){results[index]={status:'fulfilled',value:value};checkCompletion();},function(reason){results[index]={status:'rejected',reason:reason};checkCompletion();});});});};}})();
